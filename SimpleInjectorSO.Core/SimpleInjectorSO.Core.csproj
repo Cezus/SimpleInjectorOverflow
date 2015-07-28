@@ -41,6 +41,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BL\GetFeaturesByIdQuery.cs" />
+    <Compile Include="BL\TransactionEngine.cs" />
     <Compile Include="BL\UpdateEdgesTransactionCommandHandler.cs" />
     <Compile Include="Commands\UpdateEdgesTransactionCommand.cs" />
     <Compile Include="Commands\UpdateFeaturesCommand.cs" />
@@ -48,11 +49,13 @@
     <Compile Include="Entities\EdgeAttributes.cs" />
     <Compile Include="Entities\Feature.cs" />
     <Compile Include="Entities\FeatureAttributes.cs" />
+    <Compile Include="BL\Transaction.cs" />
     <Compile Include="Interfaces\ICommandHandler.cs" />
     <Compile Include="Interfaces\IQuery.cs" />
     <Compile Include="Interfaces\IQueryHandler.cs" />
     <Compile Include="Interfaces\ITransactionalCommandHandler.cs" />
     <Compile Include="Interfaces\ITransactionalCommandHandlerFactory.cs" />
+    <Compile Include="Interfaces\ITransactionEngine.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

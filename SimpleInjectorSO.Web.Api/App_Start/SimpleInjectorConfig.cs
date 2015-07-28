@@ -8,6 +8,7 @@
     using SimpleInjector.Integration.WebApi;
     using Core.Interfaces;
     using ProRail.Naiade.Infrastructure.ArcGis.TransactionalCommandHandlers;
+    using Core.BL;
 
     public static class SimpleInjectorConfig
     {
@@ -15,6 +16,7 @@
         {
             var container = new Container();
             var webapiLifestyle = new WebApiRequestLifestyle();
+            container.RegisterWebApiRequest<ITransactionEngine, TransactionEngine>();
 
             BuildManager.GetReferencedAssemblies();
             AppDomain currentDomain = AppDomain.CurrentDomain;
